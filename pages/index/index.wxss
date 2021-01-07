@@ -73,7 +73,7 @@
 }
 
 .topListSwiper{
-  height: 400rpx;
+  height: 420rpx;
 }
 
 .swiperItem {
@@ -89,7 +89,7 @@
 .musicItem {
   /* 当一个元素设置为flex，其子元素会自动成为block元素 */
   display: flex;
-  margin-bottom: 20rpx;
+  margin-bottom: 15rpx;
 }
 
 .musicItem image{
