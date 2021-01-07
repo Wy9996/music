@@ -1,5 +1,5 @@
-//发送ajax请求
-import config from './config'
+//发送ajax请求js
+import config from './config' //引入网络配置js
 export default (url,data={},method="GET") => {
   return new Promise((resolve,reject) => {
     // 初始化promise实例的状态为pending

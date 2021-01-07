@@ -1,19 +1,28 @@
-import request from '../../utils/request'
+import request from '../../utils/request' //引入通用网络请求js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    
+    bannerList:[],
+    recommendList:[],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: async function (options) {
-  let result = await request('/banner',{type: 2});
-  console.log('结果数据：',result);
+  //轮播图片数据
+  let bannerListData = await request('/banner',{type: 2});
+  this.setData({
+    bannerList:bannerListData.banners
+  })
+  //内容数据
+  let recommendListData = await request('/personalized',{limit: 10});
+  this.setData({
+    recommendList:recommendListData.result
+  })
   },
 
   /**

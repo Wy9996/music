@@ -2,14 +2,8 @@
 <view class="indexContainer">
   <!-- 轮播图片区域 -->
   <swiper class="banners" indicator-dots indicator-color="ivory" indicator-active-color="#d43c33" autoplay="true">
-    <swiper-item>
-      <image src="/static/images/nvsheng.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="/static/images/nvsheng.jpg"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="/static/images/nvsheng.jpg"></image>
+    <swiper-item wx:for-item="banners" wx:for="{{bannerList}}" wx:key="bannerId">
+      <image src="{{banners.pic}}"></image>
     </swiper-item>
   </swiper>
   <!-- 五个图标导航区域 -->
@@ -48,31 +42,10 @@
 
   <!-- 内容区 -->
   <scroll-view class="recommendScroll" enable-flex scroll-x>
-    <view class="scrollItem">
-      <image src="/static/images/nvsheng.jpg"></image>
-      <text>推荐大家一起听这个歌曲，非常的好听，非常的销魂</text>
+    <view class="scrollItem" wx:for-item="recommendScroll" wx:for="{{recommendList}}" wx:key="id">
+      <image src="{{recommendScroll.picUrl}}"></image>
+      <text>{{recommendScroll.name}}</text>
     </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvsheng.jpg"></image>
-      <text>推荐大家一起听这个歌曲，非常的好听，非常的销魂</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvsheng.jpg"></image>
-      <text>推荐大家一起听这个歌曲，非常的好听，非常的销魂</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvsheng.jpg"></image>
-      <text>推荐大家一起听这个歌曲，非常的好听，非常的销魂</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvsheng.jpg"></image>
-      <text>推荐大家一起听这个歌曲，非常的好听，非常的销魂</text>
-    </view>
-    <view class="scrollItem">
-      <image src="/static/images/nvsheng.jpg"></image>
-      <text>推荐大家一起听这个歌曲，非常的好听，非常的销魂</text>
-    </view>
-
   </scroll-view>
   
 </view>
